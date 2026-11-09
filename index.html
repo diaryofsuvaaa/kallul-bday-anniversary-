@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#c9e1f2">
+    <meta name="description"
+          content="A little birthday and anniversary universe.">
+
+    <title>A Little Universe for Kallul</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =================================
+         BACKGROUND ATMOSPHERE
+    ================================== -->
+
+    <div class="ambient-background">
+        <div class="ambient-glow blue-glow"></div>
+        <div class="ambient-glow pink-glow"></div>
+        <div class="ambient-glow brown-glow"></div>
+    </div>
+
+
+    <!-- =================================
+         BACKGROUND MUSIC
+    ================================== -->
+
+    <audio id="background-music" loop preload="none">
+        <source
+            src="music/cant-help-falling-in-love.mp3"
+            type="audio/mpeg">
+    </audio>
+
+    <button
+        id="music-toggle"
+        class="music-button"
+        type="button"
+        aria-label="Play background music">
+
+        ♫ Music
+
+    </button>
+
+
+    <!-- =================================
+         MAIN WEBSITE
+    ================================== -->
+
+    <main id="website">
+
+
+        <!-- =================================
+             SCREEN 1: WELCOME
+        ================================== -->
+
+        <section id="welcome"
+                 class="screen active">
+
+            <div class="welcome-stars" aria-hidden="true">
+                <span>✧</span>
+                <span>✦</span>
+                <span>✧</span>
+                <span>·</span>
+                <span>✦</span>
+                <span>✧</span>
+                <span>·</span>
+                <span>✦</span>
+            </div>
+
+            <div class="welcome-content">
+
+                <div class="welcome-moon">☾</div>
+
+                <img
+                    src="images/bear-welcome.png"
+                    alt="Bear illustration"
+                    class="welcome-bear">
+
+                <div class="welcome-heading">
+
+                    <p class="small-heading">
+                        A little universe
+                    </p>
+
+                    <h1>
+                        Made for Kallul
+                    </h1>
+
+                </div>
+
+                <button
+                    class="primary-button next-screen"
+                    data-next="our-story"
+                    type="button">
+
+                    Enter our little universe ✧
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             SCREEN 2: ENCHANTED MOONLIGHT
+        ================================== -->
+
+        <section id="our-story"
+                 class="screen enchanted-screen">
+
+            <div class="moonlight">
+                <div class="crescent-moon">☾</div>
+                <div class="moon-halo"></div>
+            </div>
+
+            <div class="enchanted-stars"
+                 aria-hidden="true">
+
+                <span>✧</span>
+                <span>✦</span>
+                <span>✧</span>
+                <span>✦</span>
+                <span>·</span>
+                <span>✧</span>
+                <span>·</span>
+                <span>✦</span>
+                <span>✧</span>
+                <span>·</span>
+
+            </div>
+
+            <div class="firefly-field"
+                 aria-hidden="true">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+            <div class="mushroom mushroom-left"
+                 aria-hidden="true">
+
+                <span class="mushroom-cap"></span>
+                <span class="mushroom-stem"></span>
+                <span class="mushroom-glow"></span>
+
+            </div>
+
+            <div class="mushroom mushroom-right"
+                 aria-hidden="true">
+
+                <span class="mushroom-cap"></span>
+                <span class="mushroom-stem"></span>
+                <span class="mushroom-glow"></span>
+
+            </div>
+
+            <div class="enchanted-content">
+
+                <img
+                    src="images/bear-story.png"
+                    alt="Bear illustration"
+                    class="enchanted-bear">
+
+                <div class="enchanted-messages">
+
+                    <p class="message-one">
+                        i love you, for all that you are all that you have been and all you're yet to be.
+                    </p>
+
+                    <p class="message-two">
+                        all my fairy-tale thoughts are awakened by you.
+                    </p>
+
+                    <p class="message-three">
+                        you are my evara!
+                    </p>
+
+                </div>
+
+                <button
+                    class="primary-button next-screen"
+                    data-next="our-memories"
+                    type="button">
+
+                    Continue
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             SCREEN 3: PHOTO GALLERY
+        ================================== -->
+
+        <section id="our-memories"
+                 class="screen memories-screen">
+
+            <div class="memories-background">
+
+                <div class="memory-stars">
+                    ✧ · ✦ · ✧
+                </div>
+
+            </div>
+
+            <div class="memories-content">
+
+                <div class="memories-decoration">
+                    ☾
+                </div>
+
+                <div class="memory-gallery">
+
+                    <div class="memory-frame memory-frame-one">
+
+                        <img
+                            src="images/memory-1.jpg"
+                            alt="Photograph one">
+
+                    </div>
+
+                    <div class="memory-frame memory-frame-two">
+
+                        <img
+                            src="images/memory-2.jpg"
+                            alt="Photograph two">
+
+                    </div>
+
+                    <div class="memory-frame memory-frame-three">
+
+                        <img
+                            src="images/memory-3.jpg"
+                            alt="Photograph three">
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="primary-button next-screen"
+                    data-next="enchanted-forest"
+                    type="button">
+
+                    Continue
+
+                </button>
+
+            </div>
+
+        </section>
+        <!-- =================================
+             SCREEN 4: ENCHANTED FOREST
+        ================================== -->
+
+        <section id="enchanted-forest"
+                 class="screen forest-screen">
+
+            <div class="forest-atmosphere">
+                <div class="forest-moon">☾</div>
+                <div class="forest-mist"></div>
+                <div class="forest-fireflies"></div>
+            </div>
+
+            <div class="forest-content">
+
+                <img
+                    src="images/bear-forest.png"
+                    alt="Bear illustration"
+                    class="forest-bear">
+
+                <div class="forest-scene">
+
+                    <div class="forest-tree"
+                         id="forest-tree">
+
+                        <div class="tree-leaves">🌳</div>
+                        <div class="tree-trunk"></div>
+
+                    </div>
+
+                    <div class="tree-ground"></div>
+
+                </div>
+
+                <div class="tree-garden"
+                     id="tree-garden">
+
+                    <div class="tree-progress"
+                         id="tree-progress">
+
+                        <span id="tree-stage">0</span> / 5
+
+                    </div>
+
+                    <button
+                        id="grow-tree"
+                        class="primary-button"
+                        type="button">
+
+                        Grow the little tree
+
+                    </button>
+
+                    <p id="tree-message"
+                       aria-live="polite"></p>
+
+                </div>
+
+                <button
+                    class="primary-button next-screen"
+                    data-next="firefly-game"
+                    type="button">
+
+                    Continue
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             SCREEN 5: CATCH THE FIREFLIES
+        ================================== -->
+
+        <section id="firefly-game"
+                 class="screen firefly-screen">
+
+            <div class="game-sky">
+
+                <div class="game-moon">☾</div>
+
+                <div class="game-stars">
+                    ✧ · ✦ · ✧ · ✦
+                </div>
+
+            </div>
+
+            <div class="game-content">
+
+                <div class="game-bear-decoration">
+
+                    <img
+                        src="images/bear-forest.png"
+                        alt="Bear illustration">
+
+                </div>
+
+                <div class="game-heading">
+
+                    <h2>Catch the Fireflies</h2>
+
+                    <div class="game-score">
+
+                        <span id="firefly-score">0</span>
+                        <span> / 5</span>
+
+                    </div>
+
+                </div>
+
+                <div
+                    id="firefly-area"
+                    class="firefly-game-area"
+                    aria-label="Firefly catching game">
+
+                    <button
+                        class="game-firefly"
+                        type="button"
+                        aria-label="Catch a firefly">
+
+                        ✦
+
+                    </button>
+
+                    <button
+                        class="game-firefly"
+                        type="button"
+                        aria-label="Catch a firefly">
+
+                        ✧
+
+                    </button>
+
+                    <button
+                        class="game-firefly"
+                        type="button"
+                        aria-label="Catch a firefly">
+
+                        ✦
+
+                    </button>
+
+                    <button
+                        class="game-firefly"
+                        type="button"
+                        aria-label="Catch a firefly">
+
+                        ✧
+
+                    </button>
+
+                    <button
+                        class="game-firefly"
+                        type="button"
+                        aria-label="Catch a firefly">
+
+                        ✦
+
+                    </button>
+
+                </div>
+
+                <p id="firefly-message"
+                   aria-live="polite"></p>
+
+                <button
+                    id="firefly-restart"
+                    class="secondary-button"
+                    type="button">
+
+                    Try again
+
+                </button>
+
+                <button
+                    class="primary-button next-screen"
+                    data-next="cake-studio"
+                    type="button">
+
+                    Continue
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             SCREEN 6: BIRTHDAY CAKE STUDIO
+        ================================== -->
+
+        <section id="cake-studio"
+                 class="screen cake-screen">
+
+            <div class="cake-atmosphere">
+
+                <div class="cake-stars">
+                    ✧ ✦ ✧
+                </div>
+
+                <div class="cake-moon">
+                    ☾
+                </div>
+
+            </div>
+
+            <div class="cake-content">
+
+                <div class="cake-decoration-bear">
+
+                    <img
+                        src="images/bear-letter.png"
+                        alt="Bear illustration">
+
+                </div>
+
+                <div class="cake-display">
+
+                    <div class="cake-plate"></div>
+
+                    <div class="cake-illustration"
+                         id="cake-illustration">
+
+                        <div class="cake-candle">
+                            <div class="candle-flame"></div>
+                        </div>
+
+                        <div class="cake-top"></div>
+                        <div class="cake-middle"></div>
+                        <div class="cake-bottom"></div>
+
+                    </div>
+
+                </div>
+
+                <div class="cake-controls">
+
+                    <button
+                        id="decorate-cake"
+                        class="primary-button"
+                        type="button">
+
+                        Decorate the cake
+
+                    </button>
+
+                    <button
+                        id="cake-candle-toggle"
+                        class="secondary-button"
+                        type="button">
+
+                        Blow the candle
+
+                    </button>
+
+                </div>
+
+                <p id="cake-message"
+                   aria-live="polite"></p>
+
+                <button
+                    class="primary-button next-screen"
+                    data-next="birthday-letter"
+                    type="button">
+
+                    Continue
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             SCREEN 7: BIRTHDAY LETTER
+        ================================== -->
+
+        <section id="birthday-letter"
+                 class="screen letter-screen">
+
+            <div class="letter-atmosphere">
+
+                <div class="letter-moon">
+                    ☾
+                </div>
+
+                <div class="letter-sparkles">
+                    ✧ · ✦ · ✧
+                </div>
+
+            </div>
+
+            <div class="letter-content">
+
+                <img
+                    src="images/bear-letter.png"
+                    alt="Bear illustration"
+                    class="letter-bear">
+
+                <div class="letter-paper">
+
+                    <div class="letter-decoration">
+                        ✧
+                    </div>
+
+                    <div id="letter-paper" class="letter-text">
+    <p>Because at the end of the day, you're the person I want to come home to.</p>
+
+    <p>You're the person I want to tell how my day went.</p>
+
+    <p>You are the person I want to share my happiness, sadness, frustration, and success with.</p>
+
+    <p>You look like the rest of my life! ♡</p>
+</div>
+
+                    <div class="letter-decoration">
+                        ✧
+                    </div>
+
+                </div>
+
+                <button
+                    class="primary-button next-screen"
+                    data-next="finale"
+                    type="button">
+
+                    Continue
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             SCREEN 8: FINAL CELEBRATION
+        ================================== -->
+
+        <section id="finale"
+                 class="screen finale-screen">
+
+            <div class="finale-sky">
+
+                <div class="finale-moon">
+                    ☾
+                </div>
+
+                <div class="finale-stars">
+                    <span>✧</span>
+                    <span>✦</span>
+                    <span>✧</span>
+                    <span>✦</span>
+                    <span>✧</span>
+                    <span>·</span>
+                </div>
+
+            </div>
+
+            <div class="finale-content">
+
+                <img
+                    src="images/bear-finale.png"
+                    alt="Bear illustration"
+                    class="finale-bear">
+
+                <div class="finale-petals"
+                     id="finale-petals"
+                     aria-hidden="true">
+
+                </div>
+
+                <div class="finale-celebration"
+                     id="finale-celebration">
+
+                    <div class="finale-sparkles">
+                        ✧ ✦ ✧
+                    </div>
+
+                </div>
+
+                <button
+                    id="replay-website"
+                    class="secondary-button"
+                    type="button">
+
+                    Replay
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
