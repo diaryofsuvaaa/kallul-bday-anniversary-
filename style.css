@@ -1,0 +1,1165 @@
+/* =========================================
+   KALLUL'S LITTLE UNIVERSE
+   CSS PART 1 — FOUNDATION
+========================================= */
+
+:root {
+    --blue: #c9e1f2;
+    --baby-blue: #dcecf6;
+    --pink: #d99baa;
+    --soft-pink: #f2d2dc;
+    --rust-pink: #bd7f8e;
+    --brown: #806052;
+    --dark-brown: #634b43;
+    --cream: #fff8f1;
+    --silver: #f3f3fa;
+    --text: #70565b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    font-family: Georgia, serif;
+    color: var(--text);
+    background: var(--blue);
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =========================================
+   AMBIENT BACKGROUND
+========================================= */
+
+.ambient-background {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #c9e1f2 0%,
+            #e7cbd8 48%,
+            #c5a9a0 100%
+        );
+}
+
+.ambient-glow {
+    position: absolute;
+    width: 75vw;
+    height: 75vw;
+    max-width: 650px;
+    max-height: 650px;
+    border-radius: 50%;
+    filter: blur(85px);
+    pointer-events: none;
+}
+
+.blue-glow {
+    background: rgba(150, 202, 238, 0.65);
+    top: -25%;
+    left: -25%;
+}
+
+.pink-glow {
+    background: rgba(238, 163, 186, 0.55);
+    right: -30%;
+    top: 25%;
+}
+
+.brown-glow {
+    background: rgba(151, 111, 91, 0.24);
+    bottom: -30%;
+    left: 15%;
+}
+
+
+/* =========================================
+   SCREEN SYSTEM
+========================================= */
+
+#website {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.screen {
+    display: none;
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    padding: 65px 20px 40px;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+.screen.active {
+    display: flex;
+    animation: screenAppear 0.8s ease both;
+}
+
+@keyframes screenAppear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-content {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    text-align: center;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.primary-button,
+.secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    max-width: 100%;
+    padding: 13px 25px;
+
+    border-radius: 35px;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.primary-button {
+    border: 1px solid rgba(255,255,255,0.8);
+    background: rgba(255,248,247,0.82);
+    color: var(--dark-brown);
+
+    box-shadow:
+        0 5px 20px rgba(105,75,75,0.12),
+        inset 0 1px 5px rgba(255,255,255,0.8);
+}
+
+.secondary-button {
+    border: 1px solid rgba(255,255,255,0.65);
+    background: rgba(128,96,82,0.13);
+    color: var(--dark-brown);
+}
+
+.primary-button:active,
+.secondary-button:active {
+    transform: scale(0.96);
+}
+
+button:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   MUSIC BUTTON
+========================================= */
+
+.music-button {
+    position: fixed;
+    z-index: 100;
+    top: 15px;
+    right: 15px;
+
+    min-height: 44px;
+    padding: 10px 17px;
+
+    border: 1px solid rgba(255,255,255,0.7);
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.65);
+    color: var(--dark-brown);
+
+    font-size: 13px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* =========================================
+   SCREEN 1 — WELCOME
+========================================= */
+
+#welcome {
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(255,255,255,0.5),
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            #c9e1f2,
+            #efd2df,
+            #c8b2a9
+        );
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 480px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.welcome-moon {
+    color: #fff8e9;
+    font-size: 75px;
+    line-height: 1;
+    text-shadow: 0 0 30px white;
+    margin-bottom: 8px;
+    animation: moonFloat 5s ease-in-out infinite;
+}
+
+@keyframes moonFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+.welcome-bear {
+    width: 190px;
+    height: 190px;
+    object-fit: contain;
+    margin: 5px auto 20px;
+
+    filter:
+        drop-shadow(0 10px 18px rgba(80,60,70,0.14));
+}
+
+.welcome-heading {
+    margin-bottom: 30px;
+}
+
+.small-heading {
+    color: var(--brown);
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.welcome-heading h1 {
+    color: var(--dark-brown);
+    font-size: clamp(30px, 8vw, 45px);
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+.welcome-stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.welcome-stars span {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    text-shadow: 0 0 12px white;
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+.welcome-stars span:nth-child(1) {
+    top: 12%;
+    left: 12%;
+}
+
+.welcome-stars span:nth-child(2) {
+    top: 25%;
+    right: 15%;
+}
+
+.welcome-stars span:nth-child(3) {
+    top: 55%;
+    left: 8%;
+}
+
+.welcome-stars span:nth-child(4) {
+    top: 75%;
+    right: 12%;
+}
+
+.welcome-stars span:nth-child(5) {
+    top: 85%;
+    left: 25%;
+}
+
+.welcome-stars span:nth-child(6) {
+    top: 18%;
+    right: 35%;
+}
+
+.welcome-stars span:nth-child(7) {
+    top: 65%;
+    right: 25%;
+}
+
+.welcome-stars span:nth-child(8) {
+    top: 40%;
+    left: 20%;
+}
+
+
+/* =========================================
+   SCREEN 2 — ENCHANTED MOONLIGHT
+========================================= */
+
+.enchanted-screen {
+    background:
+        radial-gradient(
+            ellipse at 50% 20%,
+            rgba(255,255,255,0.7),
+            transparent 42%
+        ),
+        radial-gradient(
+            circle at 15% 85%,
+            rgba(219,157,176,0.48),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #bfd9ee,
+            #e9c6d5,
+            #b99b91
+        );
+}
+
+.enchanted-content {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.moonlight {
+    position: absolute;
+    top: 7%;
+    right: 12%;
+}
+
+.crescent-moon {
+    position: relative;
+    z-index: 2;
+
+    color: #fff8e9;
+    font-size: 75px;
+
+    text-shadow:
+        0 0 12px white,
+        0 0 35px #fff1c9;
+}
+
+.moon-halo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -10px;
+    left: -10px;
+
+    border-radius: 50%;
+    background: rgba(255,255,255,0.17);
+    filter: blur(20px);
+}
+
+.enchanted-bear {
+    width: 145px;
+    height: 145px;
+    object-fit: contain;
+    margin: 15px auto 25px;
+
+    filter:
+        drop-shadow(0 8px 15px rgba(80,60,70,0.15));
+}
+
+.enchanted-messages {
+    width: 100%;
+    max-width: 460px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    margin: 10px auto 30px;
+}
+
+.enchanted-messages p {
+    color: #765b6b;
+    font-size: clamp(21px, 5vw, 29px);
+    line-height: 1.55;
+}
+
+.message-two {
+    color: #8b718b !important;
+    font-style: italic;
+}
+
+.message-three {
+    font-size: clamp(26px, 6vw, 35px) !important;
+}
+
+
+/* =========================================
+   ENCHANTED STARS
+========================================= */
+
+.enchanted-stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.enchanted-stars span {
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    text-shadow: 0 0 13px white;
+
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.35;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.enchanted-stars span:nth-child(1) {
+    top: 12%;
+    left: 12%;
+}
+
+.enchanted-stars span:nth-child(2) {
+    top: 30%;
+    right: 10%;
+}
+
+.enchanted-stars span:nth-child(3) {
+    top: 50%;
+    left: 7%;
+}
+
+.enchanted-stars span:nth-child(4) {
+    top: 75%;
+    right: 8%;
+}
+
+.enchanted-stars span:nth-child(5) {
+    top: 85%;
+    left: 20%;
+}
+
+.enchanted-stars span:nth-child(6) {
+    top: 20%;
+    right: 35%;
+}
+
+.enchanted-stars span:nth-child(7) {
+    top: 60%;
+    right: 20%;
+}
+
+.enchanted-stars span:nth-child(8) {
+    top: 42%;
+    left: 25%;
+}
+
+.enchanted-stars span:nth-child(9) {
+    top: 90%;
+    right: 35%;
+}
+
+.enchanted-stars span:nth-child(10) {
+    top: 15%;
+    left: 45%;
+}
+
+
+/* =========================================
+   MOBILE FOUNDATION
+========================================= */
+
+@media (max-width: 600px) {
+
+    .screen {
+        padding: 70px 18px 35px;
+    }
+
+    .welcome-bear {
+        width: 165px;
+        height: 165px;
+    }
+
+    .welcome-heading h1 {
+        font-size: clamp(30px, 9vw, 40px);
+    }
+
+    .enchanted-bear {
+        width: 125px;
+        height: 125px;
+    }
+
+    .enchanted-messages {
+        gap: 20px;
+    }
+
+    .enchanted-messages p {
+        font-size: clamp(20px, 5.4vw, 25px);
+    }
+
+    .music-button {
+        top: 12px;
+        right: 12px;
+    }
+
+    .ambient-glow {
+        filter: blur(65px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+/* =========================================
+   SCREEN 3 — PHOTO GALLERY
+========================================= */
+
+.memories-screen {
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,255,255,0.65),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #c7dff0,
+            #efd1dc,
+            #c8ada3
+        );
+}
+
+.memories-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.memories-decoration {
+    color: #fff8e9;
+    font-size: 65px;
+    text-shadow: 0 0 25px white;
+}
+
+.memory-stars {
+    position: absolute;
+    top: 12%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 23px;
+    letter-spacing: 15px;
+    opacity: 0.8;
+}
+
+.memory-gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 18px;
+    padding: 10px;
+}
+
+.memory-frame {
+    position: relative;
+    overflow: hidden;
+    padding: 8px;
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 15px;
+    background: rgba(255,250,248,0.75);
+
+    box-shadow:
+        0 10px 25px rgba(93,65,68,0.14),
+        0 0 18px rgba(255,255,255,0.25);
+}
+
+.memory-frame img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+.memory-frame-three {
+    grid-column: 1 / -1;
+    width: 72%;
+    justify-self: center;
+}
+
+.memory-frame-three img {
+    aspect-ratio: 16 / 10;
+}
+
+
+/* =========================================
+   SCREEN 4 — ENCHANTED FOREST
+========================================= */
+
+.forest-screen {
+    background:
+        radial-gradient(
+            ellipse at 50% 35%,
+            rgba(207,229,228,0.65),
+            transparent 50%
+        ),
+        linear-gradient(
+            160deg,
+            #bcd8e7,
+            #d9c1ce,
+            #80685e
+        );
+}
+
+.forest-atmosphere {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.forest-moon {
+    position: absolute;
+    top: 8%;
+    right: 12%;
+    color: #fff8e7;
+    font-size: 75px;
+    text-shadow: 0 0 30px white;
+}
+
+.forest-mist {
+    position: absolute;
+    width: 130%;
+    height: 180px;
+    bottom: 0;
+    left: -15%;
+    border-radius: 50%;
+    background: rgba(231,221,223,0.28);
+    filter: blur(35px);
+}
+
+.forest-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 540px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 22px;
+    text-align: center;
+}
+
+.forest-bear {
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 14px rgba(45,55,45,0.18));
+}
+
+.forest-scene {
+    position: relative;
+    width: 100%;
+    max-width: 330px;
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.forest-tree {
+    position: relative;
+    z-index: 2;
+    width: 145px;
+    height: 165px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.tree-leaves {
+    font-size: 100px;
+    line-height: 1;
+    filter: drop-shadow(0 0 15px rgba(204,241,194,0.35));
+    transition: transform 0.5s ease;
+}
+
+.tree-trunk {
+    width: 18px;
+    height: 25px;
+    border-radius: 3px;
+    background: #765346;
+    margin-top: -5px;
+}
+
+.tree-ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(83,99,72,0.35);
+    filter: blur(5px);
+}
+
+.tree-garden {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.tree-progress {
+    color: #fff8e9;
+    font-size: 23px;
+    text-shadow: 0 0 12px white;
+}
+
+#tree-message {
+    min-height: 24px;
+    color: #fff8e9;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   SCREEN 5 — FIREFLY GAME
+========================================= */
+
+.firefly-screen {
+    background:
+        radial-gradient(
+            ellipse at 50% 35%,
+            rgba(86,105,123,0.5),
+            transparent 60%
+        ),
+        linear-gradient(
+            160deg,
+            #91b4ce,
+            #9f899e,
+            #594d50
+        );
+}
+
+.game-sky {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.game-moon {
+    position: absolute;
+    top: 8%;
+    right: 12%;
+    color: #fff8e8;
+    font-size: 72px;
+    text-shadow: 0 0 30px white;
+}
+
+.game-stars {
+    position: absolute;
+    top: 17%;
+    left: 10%;
+    right: 10%;
+    color: rgba(255,255,255,0.85);
+    font-size: 19px;
+    letter-spacing: 12px;
+    text-align: center;
+}
+
+.game-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 520px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.game-bear-decoration img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(255,255,255,0.2));
+}
+
+.game-heading h2 {
+    color: #fff8f1;
+    font-size: clamp(25px, 7vw, 34px);
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.game-score {
+    color: #fff6dc;
+    font-size: 23px;
+    text-shadow: 0 0 12px white;
+}
+
+.firefly-game-area {
+    position: relative;
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 25px;
+
+    background:
+        radial-gradient(
+            circle at 30% 30%,
+            rgba(255,255,255,0.09),
+            transparent 40%
+        ),
+        rgba(38,49,56,0.18);
+}
+
+.game-firefly {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: #fff1a9;
+    font-size: 31px;
+
+    text-shadow:
+        0 0 8px #fff4b4,
+        0 0 20px #ffe68b;
+
+    animation: fireflyFloat 3s ease-in-out infinite alternate;
+    touch-action: manipulation;
+}
+
+.game-firefly:nth-child(1) {
+    top: 15%;
+    left: 15%;
+}
+
+.game-firefly:nth-child(2) {
+    top: 60%;
+    left: 70%;
+    animation-delay: 0.5s;
+}
+
+.game-firefly:nth-child(3) {
+    top: 35%;
+    left: 43%;
+    animation-delay: 1s;
+}
+
+.game-firefly:nth-child(4) {
+    top: 72%;
+    left: 25%;
+    animation-delay: 1.5s;
+}
+
+.game-firefly:nth-child(5) {
+    top: 12%;
+    left: 78%;
+    animation-delay: 2s;
+}
+
+.game-firefly.caught {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0);
+}
+
+@keyframes fireflyFloat {
+    from {
+        transform: translateY(-7px);
+    }
+
+    to {
+        transform: translateY(9px);
+    }
+}
+
+#firefly-message {
+    min-height: 24px;
+    color: #fff8e9;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   GLOWING MUSHROOMS
+========================================= */
+
+.mushroom {
+    position: absolute;
+    z-index: 1;
+    bottom: 4%;
+    width: 75px;
+    height: 90px;
+    pointer-events: none;
+}
+
+.mushroom-left {
+    left: 3%;
+    transform: scale(0.85);
+}
+
+.mushroom-right {
+    right: 3%;
+    transform: scale(1.05);
+}
+
+.mushroom-cap {
+    position: absolute;
+    z-index: 2;
+    top: 12px;
+    left: 3px;
+    width: 68px;
+    height: 38px;
+    border-radius: 50% 50% 22% 22%;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #f8d5d7,
+            #bd7f8e 75%
+        );
+
+    box-shadow:
+        0 0 12px rgba(255,216,224,0.85),
+        0 0 30px rgba(239,165,190,0.6);
+}
+
+.mushroom-cap::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    width: 8px;
+    height: 5px;
+    border-radius: 50%;
+    background: white;
+    box-shadow:
+        20px 8px 0 rgba(255,255,255,0.9),
+        36px -1px 0 rgba(255,255,255,0.7);
+}
+
+.mushroom-stem {
+    position: absolute;
+    top: 42px;
+    left: 25px;
+    width: 23px;
+    height: 42px;
+    border-radius: 5px 5px 12px 12px;
+    background: linear-gradient(
+        90deg,
+        #fff0dc,
+        #d8b9aa
+    );
+}
+
+.mushroom-glow {
+    position: absolute;
+    top: 28px;
+    left: -10px;
+    width: 90px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(248,188,207,0.25);
+    filter: blur(20px);
+}
+/* =========================================
+   SCREEN 6 — BIRTHDAY CAKE STUDIO
+========================================= */
+
+.cake-screen {
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(255,255,255,0.65),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            #c7dff0,
+            #efd0dc,
+            #c5aaa0
+        );
+}
+
+.cake-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 520px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+
+    text-align: center;
+}
+
+.cake-decoration-bear img {
+    width: 115px;
+    height: 115px;
+    object-fit: contain;
+}
+
+.cake-display {
+    position: relative;
+    width: 100%;
+    height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cake-plate {
+    position: absolute;
+    bottom: 18px;
+    width: 245px;
+    height: 22px;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        180deg,
+        #fff9f2,
+        #c7b6b3
+    );
+
+    box-shadow: 0 8px 15px rgba(90,65,60,0.18);
+}
+
+.cake-illustration {
+    position: relative;
+    width: 190px;
+    height: 145px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.cake-top {
+    width: 150px;
+    height: 35px;
+    border-radius: 50% 50% 15% 15%;
+    background: #d9a9c5;
+    border: 2px solid #fff1f5;
+    z-index: 3;
+}
+
+.cake-middle {
+    width: 175px;
+    height: 42p
